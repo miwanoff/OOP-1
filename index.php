@@ -1,7 +1,9 @@
 <?php
 
-require_once "Employee.php";
-require_once "Company.php";
+// require_once "Employee.php";
+// require_once "Company.php";
+include "autoload.php";
+
 $emp = new Employee();
 
 $emp->set_name("John");
@@ -22,4 +24,12 @@ $emp1->set_age(23);
 $arr = [$emp, $emp1];
 $company = new Company("Kit", $arr);
 
-echo $company;
+echo $company."\n";
+
+echo $company->get_employees_info()."\n";
+$employee = new Employee("Ilone","Mask");
+$company->set_employee(1, $employee);
+echo $company->get_employees_info();
+$company->add_employee($emp1);
+
+echo $company."\n";

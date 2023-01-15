@@ -7,7 +7,7 @@ class Company
     private $name;
     private $employees = [];
 
-    public function __construct($name = "", $employees = [])
+    public function __construct($name = "", array $employees = [])
     {
         $this->name = $name;
         $this->employees = $employees;
@@ -29,7 +29,7 @@ class Company
     {
         $this->employees = $employees;
     }
-    public function set_employee($i, $employee)
+    public function set_employee($i, Employee $employee)
     {
         $this->employees[$i] = $employee;
     }
