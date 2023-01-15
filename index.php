@@ -22,4 +22,4 @@ $emp1->set_age(23);
 $arr = [$emp, $emp1];
 $company = new Company("Kit", $arr);
 
-echo $company->get_employees_info();
+echo $company;

@@ -50,6 +50,6 @@ class Company
 
     public function __toString()
     {
-        return "{$this->get_name()}";
+        return "{$this->get_name()}: {$this->get_employees_info()}";
     }
 }
